@@ -1,6 +1,8 @@
 # Placeholders: %RPGSprint_sprint%     | ex. [|||Sprint|||]
 #               %RPGSprint_sprintraw%  | ex. 40
 
+# Must use MiniMessage! https://docs.adventure.kyori.net/minimessage/format.html
+
 
 stamina:
   checkTicks: 20 # 20 ticks = 1 second, highly recommend not changing this!
