@@ -10,7 +10,7 @@ public class PlayerChecker {
 
     public static void playerChecker() {
 
-        int removeStamina = RPGSprint.getInstance().getConfig().getInt("stamina.removestamina");
+        int removeStamina = RPGSprint.getInstance().getConfig().getInt("stamina.removeStamina");
         int addStamina = RPGSprint.getInstance().getConfig().getInt("stamina.addStamina");
 
         int removeFood = RPGSprint.getInstance().getConfig().getInt("food.removeFood");
@@ -37,7 +37,7 @@ public class PlayerChecker {
                     if (b >= 0) {
                         RPGSprint.getInstance().getPlayerSprint().put(player, b);
                     }
-                    //RPGSprint.getInstance().getLogger().info(player.getName() + " has " + b);
+                    RPGSprint.getInstance().getLogger().info(player.getName() + " has " + b);
 
                     int c;
                     if (b < RPGSprint.getInstance().getStamina()/4) {
