@@ -25,9 +25,13 @@ public class PlayerChecker {
                     int a = RPGSprint.getInstance().getPlayerSprint().get(player);
                     if (player.isSprinting()) {
                         b = a - removeStamina;
-                        UpdateActionBar.updateActionBar(player, true);
+                        if (RPGSprint.getInstance().getConfig().getBoolean("actionBar.enable")) {
+                            UpdateActionBar.updateActionBar(player, true);
+                        }
                     } else {
-                        UpdateActionBar.updateActionBar(player, false);
+                        if (RPGSprint.getInstance().getConfig().getBoolean("actionBar.enable")) {
+                            UpdateActionBar.updateActionBar(player, false);
+                        }
                         if (a < RPGSprint.getInstance().getStamina()) {
                             b = a + addStamina;
                         } else {
