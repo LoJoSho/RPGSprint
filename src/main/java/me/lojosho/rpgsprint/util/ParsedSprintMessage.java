@@ -29,14 +29,24 @@ public class ParsedSprintMessage {
         }
         String barMessage = bar.toString();
         if (RPGSprint.getInstance().getConfig().getBoolean("stamina.bars")) {
+
+            String highStart = RPGSprint.getInstance().getConfig().getString("bars.highStart");
+            String highEnd = RPGSprint.getInstance().getConfig().getString("bars.highEnd");
+
+            String mediumStart = RPGSprint.getInstance().getConfig().getString("bars.mediumStart");
+            String mediumEnd = RPGSprint.getInstance().getConfig().getString("bars.mediumEnd");
+
+            String lowStart = RPGSprint.getInstance().getConfig().getString("bars.lowStart");
+            String lowEnd = RPGSprint.getInstance().getConfig().getString("bars.lowEnd");
+
             if (stamina >= placeholder && placeholder > stamina / 2) {
-                barMessage = "<GREEN>[" + barMessage + "<GREEN>]";
+                barMessage = highStart + barMessage + highEnd;
             }
             if (stamina / 2 >= placeholder && placeholder > stamina / 4) {
-                barMessage = "<YELLOW>[" + barMessage + "<YELLOW>]";
+                barMessage = mediumStart + barMessage + mediumEnd;
             }
             if (stamina / 4 >= placeholder && placeholder >= 0) {
-                barMessage = "<RED>[" + barMessage + "<RED>]";
+                barMessage = lowStart + barMessage + lowEnd;
             }
         }
         return barMessage;

@@ -7,7 +7,16 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 public class PlayerChecker {
 
+
     public static void playerChecker() {
+
+        int removeStamina = RPGSprint.getInstance().getConfig().getInt("stamina.removestamina");
+        int addStamina = RPGSprint.getInstance().getConfig().getInt("stamina.addStamina");
+
+        int removeFood = RPGSprint.getInstance().getConfig().getInt("food.removeFood");
+        int addFood = RPGSprint.getInstance().getConfig().getInt("food.addFood");
+
+
         new BukkitRunnable() {
             @Override
             public void run() {
@@ -15,12 +24,12 @@ public class PlayerChecker {
                     int b;
                     int a = RPGSprint.getInstance().getPlayerSprint().get(player);
                     if (player.isSprinting()) {
-                        b = a - 1;
+                        b = a - removeStamina;
                         UpdateActionBar.updateActionBar(player, true);
                     } else {
                         UpdateActionBar.updateActionBar(player, false);
                         if (a < RPGSprint.getInstance().getStamina()) {
-                            b = a + 3;
+                            b = a + addStamina;
                         } else {
                             b = RPGSprint.getInstance().getStamina();
                         }
@@ -32,11 +41,11 @@ public class PlayerChecker {
 
                     int c;
                     if (b < RPGSprint.getInstance().getStamina()/4) {
-                        c = player.getFoodLevel() - 3;
+                        c = player.getFoodLevel() - removeFood;
                         //plugin.getLogger().info(player.getName() + " sub " + c);
                     } else {
                         if (player.getFoodLevel() <= 21) {
-                            c = player.getFoodLevel() + 4;
+                            c = player.getFoodLevel() + addFood;
                         } else {
                             c = player.getFoodLevel();
                         }
@@ -47,7 +56,7 @@ public class PlayerChecker {
                     }
                 }
             }
-        }.runTaskTimer(RPGSprint.getInstance(), 20, 20);
+        }.runTaskTimer(RPGSprint.getInstance(), 0, RPGSprint.getInstance().getConfig().getInt("stamina.checkTicks"));
     }
 
 }

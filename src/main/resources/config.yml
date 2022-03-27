@@ -1,10 +1,26 @@
+# Placeholders: %RPGSprint_sprint%     | ex. [|||Sprint|||]
+#               %RPGSprint_sprintraw%  | ex. 40
+
+
 stamina:
-  amount: 40
+  checkTicks: 20 # 20 ticks = 1 second, highly recommend not changing this!
+  addStamina: 3 # If a player isn't sprinting, how much stamina should it add?
+  removeStamina: 1 # If a player is sprinting, how much stamina should it remove
+  amount: 40 # Max. stamina a player should have.
   text: "|||Stamina|||"
   bars: true # This adds [] on each side
+food:
+  addFood: 4 # How much food to add if a player is above sprinting.
+  removeFood: 3 # How much food to remove if a player is in the red.
 actionBar:
-  enable: true
+  enable: true # Should we send an actionbar?
   walking: "<RED> Health: %player_health% <GRAY>| <GRAY>%player_x% <WHITE>%player_direction% <GRAY>%player_z% <GRAY>| <BLUE>%player_world%"
   sprinting: "<RED> Health: %player_health% <GRAY>| %RPGSprint_sprint% <GRAY>| <BLUE>%player_world%"
 
-
+bars:
+  highStart: "<GREEN>["
+  highEnd: "<GREEN>]"
+  mediumStart: "<YELLOW>["
+  mediumEnd: "<YELLOW>]"
+  lowStart: "<RED>["
+  lowEnd: "<RED>]"
