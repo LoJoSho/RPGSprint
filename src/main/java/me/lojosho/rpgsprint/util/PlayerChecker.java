@@ -28,7 +28,7 @@ public class PlayerChecker {
                     if (b >= 0) {
                         RPGSprint.getInstance().getPlayerSprint().put(player, b);
                     }
-                    RPGSprint.getInstance().getLogger().info(player.getName() + " has " + b);
+                    //RPGSprint.getInstance().getLogger().info(player.getName() + " has " + b);
 
                     int c;
                     if (b < RPGSprint.getInstance().getStamina()/4) {
