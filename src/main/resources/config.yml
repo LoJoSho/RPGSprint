@@ -1,0 +1,10 @@
+stamina:
+  amount: 40
+  text: "|||Stamina|||"
+  bars: true # This adds [] on each side
+actionBar:
+  enable: true
+  walking: "<RED> Health: %player_health% <GRAY>| <GRAY>%player_x% <WHITE>%player_direction% <GRAY>%player_z% <GRAY>| <BLUE>%player_world%"
+  sprinting: "<RED> Health: %player_health% <GRAY>| %RPGSprint_sprint% <GRAY>| <BLUE>%player_world%"
+
+

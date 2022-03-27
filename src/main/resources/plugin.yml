@@ -1,0 +1,7 @@
+name: RPGSprint
+version: '${project.version}'
+main: me.lojosho.rpgsprint.RPGSprint
+api-version: 1.18
+authors: [ LoJoSho ]
+depend:
+  - PlaceholderAPI
