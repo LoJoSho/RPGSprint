@@ -39,11 +39,11 @@ public class RPGSprintExpansion extends PlaceholderExpansion {
     public String onRequest(OfflinePlayer offlinePlayer, String params) {
         if (params.equalsIgnoreCase("sprint")) {
             return ParsedSprintMessage.parsedSprintMessage(offlinePlayer.getPlayer());
-        } else {
-            if (params.equalsIgnoreCase("sprintraw")) {
-                return RPGSprint.getInstance().getPlayerSprint().get(offlinePlayer.getPlayer()).toString();
-            }
-            return null;
         }
+
+        if (params.equalsIgnoreCase("sprintraw")) {
+            return RPGSprint.getInstance().getPlayerSprint().get(offlinePlayer.getPlayer()).toString();
+        }
+        return null;
     }
 }
