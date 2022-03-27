@@ -26,7 +26,7 @@ public final class RPGSprint extends JavaPlugin {
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
             new RPGSprintExpansion(this).register();
         } else {
-            getLogger().warning("Could not find PlaceholderAPI! This plugin is required.");
+            getLogger().severe("Could not find PlaceholderAPI! This plugin is required!");
             Bukkit.getPluginManager().disablePlugin(this);
         }
         stamina = getConfig().getInt("stamina.amount");
