@@ -3,4 +3,6 @@ RPGSprint is a plugin that adds "stamina" to sprinting in Minecraft, ideal for R
 
 [Config.yml](https://github.com/LoJoSho/RPGSprint/blob/master/src/main/resources/config.yml)
 
-![https://i.imgur.com/HEhxNZ3.gif](https://i.imgur.com/HEhxNZ3.gif)
+![Example Gif](https://i.imgur.com/CwBXcvW.gif)
+
+![Example Picture](https://i.imgur.com/vxqCif4.png)
