@@ -16,6 +16,7 @@ public class CommandRPGSprint implements CommandExecutor {
                 case "reload":
                     if (sender.hasPermission("RPGSprint.reload")) {
                         RPGSprint.getInstance().setupPlugin();
+                        sender.sendMessage(Component.text("Successfully Reloaded RPGSprint"));
                         return true;
                     } else {
                         sender.sendMessage(Component.text("No Permission!").color(NamedTextColor.RED));
