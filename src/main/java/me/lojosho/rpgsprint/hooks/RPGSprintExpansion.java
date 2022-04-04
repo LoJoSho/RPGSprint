@@ -4,7 +4,6 @@ import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import me.lojosho.rpgsprint.RPGSprint;
 import me.lojosho.rpgsprint.util.ParsedSprintMessage;
 import org.bukkit.OfflinePlayer;
-import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 public class RPGSprintExpansion extends PlaceholderExpansion {
@@ -43,6 +42,9 @@ public class RPGSprintExpansion extends PlaceholderExpansion {
 
         if (params.equalsIgnoreCase("sprintraw")) {
             return RPGSprint.getInstance().getPlayerSprint().get(offlinePlayer.getPlayer()).toString();
+        }
+        if (params.equalsIgnoreCase("sprintmax")) {
+            return Integer.toString(RPGSprint.getInstance().getStamina());
         }
         return null;
     }

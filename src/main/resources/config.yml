@@ -1,5 +1,6 @@
 # Placeholders: %RPGSprint_sprint%     | ex. [|||Sprint|||]
-#               %RPGSprint_sprintraw%  | ex. 40
+#               %RPGSprint_sprintraw%  | ex. 28
+#               %RPGSprint_sprintmax%  | ex. 40
 
 # Must use MiniMessage! https://docs.adventure.kyori.net/minimessage/format.html
 
